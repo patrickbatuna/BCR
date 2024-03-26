@@ -29,6 +29,22 @@ p {
   width: 15vh;
 }
 
+.offcanvas-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+#offcanvasRightLabel {
+  margin: 0px;
+}
+
+.offcanvas-menu > a,
+.offcanvas-menu > button {
+  margin: 0px;
+  margin-inline-end: auto;
+}
+
 /* .nav-link.register-button {
   background-color: #5cb85f;
   color: white;
@@ -74,7 +90,7 @@ p {
   gap: 16px;
 }
 
-.hero-section__left > button {
+.green-button {
   width: fit-content;
   padding: 8px;
   border: none;
@@ -84,7 +100,7 @@ p {
   /* transition: all, 0.2s; */
 }
 
-.hero-section__left > button:hover {
+.green-button:hover {
   background-color: #0f8213;
   transition: all, 0.2s;
 }
@@ -418,7 +434,7 @@ footer {
   }
 
   .hero-section__left > p,
-  .hero-section__left > button {
+  .green-button {
     font-size: 1.2rem;
   }
 
