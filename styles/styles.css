@@ -29,6 +29,10 @@ p {
   width: 15vh;
 }
 
+.purple-background {
+  background-color: #f1f3ff;
+}
+
 .offcanvas-menu {
   display: flex;
   flex-direction: column;
@@ -56,10 +60,9 @@ p {
   display: flex;
   flex-direction: column;
   /* gap: 64px; */
-  padding-block: 32px;
+  padding-bottom: 32px;
 }
 
-.hero-section,
 .our-services,
 .why-us,
 .testimony,
@@ -75,6 +78,7 @@ p {
   width: 100%;
   height: fit-content;
   display: flex;
+  padding-top: 32px;
 }
 
 .hero-section > img {
@@ -236,6 +240,10 @@ p {
   align-items: center;
 }
 
+.owl-carousel {
+  width: 300%;
+}
+
 .testimony > h3 {
   font-size: 1.4rem;
 }
@@ -246,7 +254,7 @@ p {
 
 .testimony__item {
   margin-inline: auto;
-  width: 60%;
+  width: 100%;
   height: fit-content;
   display: flex;
   background-color: #f1f3ff;
@@ -255,8 +263,9 @@ p {
   gap: 32px;
 }
 
-.testimony__item > img {
-  height: 15vh;
+img.testimony__item__image {
+  width: 80px;
+  height: 80px;
   margin-block: auto;
 }
 
@@ -268,8 +277,9 @@ p {
   gap: 12px;
 }
 
-.testimony__item__right > img {
-  width: 15vh;
+img.testimony__item__right__image {
+  height: 16px;
+  width: 80px;
 }
 
 .testimony__button-container {
@@ -407,11 +417,6 @@ footer {
     margin-inline-end: 16px;
   }
 
-  .main {
-    gap: 32px;
-    padding-top: 16px;
-  }
-
   .hero-section,
   .our-services,
   .why-us,
@@ -423,6 +428,15 @@ footer {
     width: 100%;
     padding-inline: 24px;
     padding-block: 0px;
+  }
+
+  .our-services,
+  .why-us,
+  .testimony,
+  .cta-banner,
+  .faq,
+  footer {
+    margin-top: 32px;
   }
 
   .hero-section {
@@ -447,7 +461,7 @@ footer {
   }
 
   .our-services > img {
-    width: 40%;
+    width: 80%;
   }
 
   .our-services h2 {
@@ -503,6 +517,21 @@ footer {
     height: fit-content;
     padding: 16px;
     gap: 16px;
+    flex-direction: column;
+  }
+
+  .testimony__item__image {
+    width: 80px;
+    height: 80px;
+  }
+
+  .testimony__item__right__image {
+    height: 16px;
+    width: 80px;
+  }
+
+  .rate {
+    margin-inline: auto;
   }
 
   .testimony__item p {

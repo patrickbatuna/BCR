@@ -6,7 +6,7 @@ const heroSectionTimeline = gsap.timeline({
   defaults: { x: -100, duration: 0.5, opacity: 0, blur: 1, ease: Power2 },
   scrollTrigger: {
     trigger: ".hero-section",
-    toggleActions: "restart play restart reset",
+    toggleActions: "play none none none",
     // markers: "true",
   },
 });
@@ -28,7 +28,7 @@ const ourServicesTimeline = gsap.timeline({
   defaults: { x: 100, duration: 0.5, opacity: 0, blur: 1, ease: Power2 },
   scrollTrigger: {
     trigger: ".our-services",
-    toggleActions: "restart play restart reset",
+    toggleActions: "play none none none",
     // markers: "true",
   },
 });
@@ -57,7 +57,7 @@ const whyUsTimeline = gsap.timeline({
   defaults: { duration: 0.5, opacity: 0, blur: 1, ease: Power2 },
   scrollTrigger: {
     trigger: ".why-us",
-    toggleActions: "restart play restart reset",
+    toggleActions: "play none none none",
     // markers: "true",
   },
 });
@@ -97,7 +97,7 @@ const testimonyTimeline = gsap.timeline({
   },
   scrollTrigger: {
     trigger: ".testimony",
-    toggleActions: "restart play restart reset",
+    toggleActions: "play none none none",
     // markers: "true",
   },
 });
@@ -105,7 +105,7 @@ const testimonyTimeline = gsap.timeline({
 testimonyTimeline
   .from(".testimony__title", {})
   .from(".testimony__description", {}, "<0.25")
-  .from(".carousel", {}, "<0.25")
+  .from(".owl-carousel", {}, "<0.25")
   .from(".testimony__button-container", {}, "<0.25");
 
 const ctaBannerTimeline = gsap.timeline({
@@ -119,7 +119,7 @@ const ctaBannerTimeline = gsap.timeline({
   },
   scrollTrigger: {
     trigger: ".cta-banner",
-    toggleActions: "restart play restart reset",
+    toggleActions: "play none none none",
     // markers: "true",
   },
 });
@@ -140,7 +140,7 @@ const faqTimeline = gsap.timeline({
   },
   scrollTrigger: {
     trigger: ".faq",
-    toggleActions: "restart play restart reset",
+    toggleActions: "play none none none",
     // markers: "true",
   },
 });
@@ -177,3 +177,46 @@ for (const item of accordionItem) {
 // }
 
 //animation end
+
+// $(function () {
+//   // Owl Carousel
+//   var owl = $(".owl-carousel");
+//   owl.owlCarousel({
+//     items: 1,
+//     margin: 10,
+//     loop: true,
+//     nav: true,
+//   });
+// });
+
+$(".owl-carousel").owlCarousel({
+  center: true,
+  loop: true,
+  margin: 10,
+  nav: false,
+  autoplay: false,
+  paginationSpeed: 500,
+  autoplayTimeout: 3000,
+  autoplayHoverPause: true,
+  dots: false,
+  responsive: {
+    0: {
+      items: 1,
+    },
+    600: {
+      items: 2,
+    },
+    1000: {
+      items: 2,
+    },
+  },
+});
+
+var owl = $(".owl-carousel");
+owl.owlCarousel();
+$(".btn-right").click(function () {
+  owl.trigger("next.owl.carousel");
+});
+$(".btn-left").click(function () {
+  owl.trigger("prev.owl.carousel", [300]);
+});
